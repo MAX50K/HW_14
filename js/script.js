@@ -182,19 +182,28 @@ console.log("-----------------------------------");
 // 2
 
 const getUsersWithEyeColor = (users, color) => {
-    return users.filter((user) => user.eyeColor === color).map
+    return users.filter((user) => user.eyeColor === color)
   };
   
-  console.log(getUsersWithEyeColor(users, 'blue')); // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+  console.log(getUsersWithEyeColor(users, 'blue'));
+
+// 3
 
 const getUsersWithGender = (users, gender) => {
     return users.filter((user) => user.gender === gender).map((user) => user.name)
   };
   
-//   console.log(getUsersWithGender(users, 'female'));
+  console.log(getUsersWithGender(users, 'male'));
+// 4
+const getInactiveUsers = users => {
+  return users.filter((user) => user.isActive === false).map((user) => user.name)
+};
+
+console.log(getInactiveUsers(users));
+// 5
 const getUserWithEmail = (users, email) => {
     return users.find((user) => user.email === email)
 };
 
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {об'єкт користувача Sheree Anthony}
-console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
+console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+console.log(getUserWithEmail(users, 'elmahead@omatom.com'));
